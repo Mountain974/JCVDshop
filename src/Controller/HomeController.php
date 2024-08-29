@@ -34,11 +34,14 @@ class HomeController extends AbstractController
     {
 
         $fakeReplicas = $bouquetRepo->findAll();
-        $randomfakeReplicas = $fakeReplicas[array_rand($fakeReplicas)]->getFakeReplica();
+        $randomBouquet = $fakeReplicas[array_rand($fakeReplicas)];
+        $randomfakeReplica = $randomBouquet->getFakeReplica();
+        $randomSynonyme = $randomBouquet->getSynonyme();
+        $randomfakeReplicaStylized = str_replace($randomSynonyme, "<span class='highlight'>$randomSynonyme</span>", $randomfakeReplica);
 
         return $this->render('citations/citations.html.twig', [
             'title' => 'Citations',
-            'fakeReplica' => $randomfakeReplicas,
+            'fakeReplica' => $randomfakeReplicaStylized,
         ]);
     }
 
@@ -47,11 +50,14 @@ class HomeController extends AbstractController
     {
 
         $fakeReplicas = $bouquetRepo->findAll();
-        $randomfakeReplicas = $fakeReplicas[array_rand($fakeReplicas)]->getFakeReplica();
+        $randomBouquet = $fakeReplicas[array_rand($fakeReplicas)];
+        $randomfakeReplica = $randomBouquet->getFakeReplica();
+        $randomSynonyme = $randomBouquet->getSynonyme();
+        $randomfakeReplicaStylized = str_replace($randomSynonyme, "<span class='highlight'>$randomSynonyme</span>", $randomfakeReplica);
 
         return $this->render('promo/promo.html.twig', [
             'title' => 'Promo',
-            'fakeReplica' => $randomfakeReplicas,
+            'fakeReplica' => $randomfakeReplicaStylized,
         ]);
     }
 }

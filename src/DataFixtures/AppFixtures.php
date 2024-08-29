@@ -16,12 +16,7 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $produits = [
-            [
-                'nom' => 'Caleçon sale JCVD',
-                'prix' => 650,
-                'description' => 'Porté lors de sa fameuse cascade dans son film "last action hero"',
-                'image' => 'caleconJCVD.jpg'
-            ],
+
             [
                 'nom' => 'Kickboxer : La chaussette anti-transpiration JCVD',
                 'prix' => 99,
@@ -45,6 +40,12 @@ class AppFixtures extends Fixture
                 'prix' => 28,
                 'description' => 'Pour éfleurer les tablettes légendaire de JCVD',
                 'image' => 'tapisSouris.jpg'
+            ],
+            [
+                'nom' => 'Caleçon sale JCVD',
+                'prix' => 650,
+                'description' => 'Porté lors de sa fameuse cascade dans son film "last action hero"',
+                'image' => 'caleconJCVD.jpg'
             ],
             [
                 'nom' => "L'authentique assiette de JCVD",
