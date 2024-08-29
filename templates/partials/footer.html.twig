@@ -1,7 +1,5 @@
 <footer class="card-footer footer">
-    <i style="color: white"><< {{ fakeReplica }} >></i>
-    <br>
-    <br>
+    <i><< {{ fakeReplica|raw }} >></i>
     {% set year = "now" | date("Y") %}
-    &copy JCVD unofficial shop {{ year }}
+    <div>&copy JCVD unofficial shop {{ year }}</div>
 </footer>

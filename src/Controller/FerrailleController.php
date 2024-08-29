@@ -15,11 +15,14 @@ class FerrailleController extends AbstractController
     public function index(FerrailleRepository $ferrailleRep, BouquetRepository $bouquetRepo): Response
     {
         $fakeReplicas = $bouquetRepo->findAll();
-        $randomfakeReplicas = $fakeReplicas[array_rand($fakeReplicas)]->getFakeReplica();
+        $randomBouquet = $fakeReplicas[array_rand($fakeReplicas)];
+        $randomfakeReplica = $randomBouquet->getFakeReplica();
+        $randomSynonyme = $randomBouquet->getSynonyme();
+        $randomfakeReplicaStylized = str_replace($randomSynonyme, "<span class='highlight'>$randomSynonyme</span>", $randomfakeReplica);
         // Renvoyer le template Twig avec les données
         return $this->render('ferraille/index.html.twig', [
             'title' => 'Joujoux',
-            'fakeReplica' => $randomfakeReplicas,
+            'fakeReplica' => $randomfakeReplicaStylized,
             'ferrailles' => $ferrailleRep->findAll(),
         ]);
     }

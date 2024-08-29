@@ -14,13 +14,17 @@ class HomeController extends AbstractController
     public function index(ProduitRepository $produitRep, BouquetRepository $bouquetRepo): Response
     {
         $fakeReplicas = $bouquetRepo->findAll();
-        $randomfakeReplicas = $fakeReplicas[array_rand($fakeReplicas)]->getFakeReplica();
+        $randomBouquet = $fakeReplicas[array_rand($fakeReplicas)];
+        $randomfakeReplica = $randomBouquet->getFakeReplica();
+        $randomSynonyme = $randomBouquet->getSynonyme();
+        $randomfakeReplicaStylized = str_replace($randomSynonyme, "<span class='highlight'>$randomSynonyme</span>", $randomfakeReplica);
 
-       
+
+
 
         return $this->render('home/index.html.twig', [
             'title' => 'Home',
-            'fakeReplica' => $randomfakeReplicas,
+            'fakeReplica' => $randomfakeReplicaStylized,
             'produits' => $produitRep->findAll(),
         ]);
     }
