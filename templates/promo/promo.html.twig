@@ -39,8 +39,15 @@
                 <p class="lead text-center">Pour obtenir ton code promo exclusif JCVD, résous cette énigme !</p>
                 <p class="text-center">Selon JCVD, quel est le prix pour faire une bonne dalle béton ?</p>
                 <form class="form-inline justify-content-center">
-                    <input type="text" class="form-control" id="reponse" placeholder="Ta réponse">
-                    <button type="button" class="btn btn-primary" onclick="verifierReponse()">Vérifier</button>
+                    <div class="row">
+                        <div class="col-8">
+                            <input type="text" class="form-control" id="reponse" placeholder="Ta réponse">
+                        </div>
+                        <div class="col-4">
+                            <button type="button" class="btn btn-primary" onclick="verifierReponse()">Vérifier</button>
+                        </div>
+
+                    </div>
                 </form>
                 <p id="resultat" class="text-center"></p>
             </div>
