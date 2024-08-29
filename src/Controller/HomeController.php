@@ -28,4 +28,36 @@ class HomeController extends AbstractController
             'produits' => $produitRep->findAll(),
         ]);
     }
+
+    #[Route('/citations', name: 'app_citations')]
+    public function citations(BouquetRepository $bouquetRepo): Response
+    {
+
+        $fakeReplicas = $bouquetRepo->findAll();
+        $randomBouquet = $fakeReplicas[array_rand($fakeReplicas)];
+        $randomfakeReplica = $randomBouquet->getFakeReplica();
+        $randomSynonyme = $randomBouquet->getSynonyme();
+        $randomfakeReplicaStylized = str_replace($randomSynonyme, "<span class='highlight'>$randomSynonyme</span>", $randomfakeReplica);
+
+        return $this->render('citations/citations.html.twig', [
+            'title' => 'Citations',
+            'fakeReplica' => $randomfakeReplicaStylized,
+        ]);
+    }
+
+    #[Route('/promos', name: 'app_promo')]
+    public function promo(BouquetRepository $bouquetRepo): Response
+    {
+
+        $fakeReplicas = $bouquetRepo->findAll();
+        $randomBouquet = $fakeReplicas[array_rand($fakeReplicas)];
+        $randomfakeReplica = $randomBouquet->getFakeReplica();
+        $randomSynonyme = $randomBouquet->getSynonyme();
+        $randomfakeReplicaStylized = str_replace($randomSynonyme, "<span class='highlight'>$randomSynonyme</span>", $randomfakeReplica);
+
+        return $this->render('promo/promo.html.twig', [
+            'title' => 'Promo',
+            'fakeReplica' => $randomfakeReplicaStylized,
+        ]);
+    }
 }

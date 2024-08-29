@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
+
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+
+    <div class="example-wrapper">
+        <h1 class="m-5">✅ PROMO ✅</h1>
+
+        <p class ="m-5">Pour obtenir ton code promo JCVD, trouve la bonne réponse ! </p>
+        <p class ="ms-5">Selon JCVD, quel est le prix pour faire une bonne dalle béton ?  </p>
+
+        <form class ="m-5">
+            <input type="text" id="reponse">
+            <button type="button" onclick="verifierReponse()">Vérifier</button>
+        </form>
+
+        <p id="resultat"></p>
+
+        <script>
+            function verifierReponse() {
+                const reponseUtilisateur = document.getElementById('reponse').value;
+                const resultatElement = document.getElementById('resultat');
+
+                if (reponseUtilisateur.toLowerCase() === '100') {
+                    resultatElement.textContent = "Bravo, vous avez trouvé ! /n /n Citation bonus : Va sous l'eau, avec un peu de logique, tu trouveras";
+                } else {
+                    resultatElement.textContent = 'Ce nest pas la bonne réponse.';
+                }
+            }
+        </script>
+    </div>
+{% endblock %}
