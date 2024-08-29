@@ -4,31 +4,52 @@
 
 {% block body %}
     <style>
-        .example-wrapper {
-            margin: 1em auto;
-            max-width: 800px;
-            width: 95%;
-            font: 18px/1.5 sans-serif;
+        /* Styles personnalisés */
+        .container {
+            background-color: #f8f9fa;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .example-wrapper code {
-            background: #F5F5F5;
-            padding: 2px 6px;
+        .display-4 {
+            color: #3498db; /* Bleu clair */
+        }
+
+        .btn-primary {
+            background-color: #3498db; /* Bleu clair */
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+        /* Styles pour l'image */
+        .serviette-image {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 
-    <div class="example-wrapper">
-        <h1 class="m-5">✅ PROMO ✅</h1>
+    <div class="container mb-5 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center display-4"> PROMO EXPLOSIVE </h1>
+                <p class="lead text-center">Pour obtenir ton code promo exclusif JCVD, résous cette énigme !</p>
+                <p class="text-center">Selon JCVD, quel est le prix pour faire une bonne dalle béton ?</p>
+                <form class="form-inline justify-content-center">
+                    <input type="text" class="form-control" id="reponse" placeholder="Ta réponse">
+                    <button type="button" class="btn btn-primary" onclick="verifierReponse()">Vérifier</button>
+                </form>
+                <p id="resultat" class="text-center"></p>
+            </div>
+        </div>
 
-        <p class ="m-5">Pour obtenir ton code promo JCVD, trouve la bonne réponse ! </p>
-        <p class ="ms-5">Selon JCVD, quel est le prix pour faire une bonne dalle béton ?  </p>
-
-        <form class ="m-5">
-            <input type="text" id="reponse">
-            <button type="button" onclick="verifierReponse()">Vérifier</button>
-        </form>
-
-        <p id="resultat"></p>
+        <div class="row mt-5" style="height: 180px">
+            <p class="col-4 ms-5">Avec le code promo, en cadeau, une superbe serviette JCVD ! </p>
+            <img class="col-4 w-auto serviette-image" src="{{ asset('images/servietteJCVD.jpg') }}">
+        </div>
 
         <script>
             function verifierReponse() {
@@ -36,9 +57,9 @@
                 const resultatElement = document.getElementById('resultat');
 
                 if (reponseUtilisateur.toLowerCase() === '100') {
-                    resultatElement.textContent = "Bravo, vous avez trouvé ! /n /n Citation bonus : Va sous l'eau, avec un peu de logique, tu trouveras";
+                    resultatElement.innerHTML = `Bravo, vous avez trouvé ! <br><br> <u>Citation bonus :</u> Va sous l'eau, avec un peu de logique, tu trouveras.`; // Utiliser innerHTML pour permettre l'interprétation de HTML
                 } else {
-                    resultatElement.textContent = 'Ce nest pas la bonne réponse.';
+                    resultatElement.textContent = 'Ce n\'est pas la bonne réponse.';
                 }
             }
         </script>

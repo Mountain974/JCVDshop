@@ -33,3 +33,23 @@ html, body {
 .highlight {
     text-shadow: 1px 1px 10px rgb(128, 129, 132);
 }
+
+.container {
+    background-color: #f8f9fa;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.display-4 {
+    color: #3498db; /* Bleu clair */
+}
+
+.btn-primary {
+    background-color: #3498db; /* Bleu clair */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
