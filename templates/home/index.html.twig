@@ -3,25 +3,11 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<h1 class="mt-5 mx-auto">Bienvenue au JCVD Shop</h1>
-
-<div class="row m-5">
-        {% for produit in produits %}
-                <div class="col-md-4">
-                    <div class="card mb-4" style="width: 25rem;">
-                        <img class="card-img-top" src="{{ asset('images/' ~ produit.image) }}" alt="illustration {{ produit.nom }}"/>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ produit.nom }}</h5>
-                            <p class="card-text">{{ produit.description }}</p>
-                            <p class="card-text">Prix : {{ produit.prix }} €</p>
-                        </div>
-                    </div>
-                </div>
-        {% endfor %}
+<h1 class="mt-5 mx-auto">Bienvenue sur le shop non-officiel de</h1>
+<h2 class="mx-auto">Jean-Claude VAN DAMME</h2>
+<div style="height: 800px" class="mx-auto mt-5">
+<img src="{{ asset('images/jcvd.png') }}" alt="JCVD" class='home_img'/>
 </div>
+
 {% endblock %}

@@ -21,7 +21,7 @@ class FerrailleFixtures extends Fixture
 
         // Ferraille 2
         $ferraille2 = new Ferraille();
-        $ferraille2->setNom('Pistolets de JJ');
+        $ferraille2->setNom('Pistolets de JC');
         $ferraille2->setPrix(200.00);
         $ferraille2->setType('Cuivre');
         $ferraille2->setDescription('Pistolets en cuivre, parfait pour la dézinguerie.');
@@ -42,13 +42,13 @@ class FerrailleFixtures extends Fixture
         $ferraille4->setNom('Grosse grosse grosse mitraillette de Jean-Claude');
         $ferraille4->setPrix(120.00);
         $ferraille4->setType('Plomb');
-        $ferraille4->setDescription('Embarquez avec la très grosse mitraillette en plomb de Jean-Claude et préparez-vous à faire rougir d\'envie les armées entières ! Un outil de choix pour ceux qui veulent vraiment impressionner avec leur arsenal. Avec elle, chaque tir est une scène d’action et chaque cible devient un adversaire à conquérir !');
+        $ferraille4->setDescription('Embarquez avec la très grosse mitraillette en plomb de Jean-Claude et préparez-vous à faire rougir d\'envie les armées entières ! Avec elle, chaque tir est une scène d’action et chaque cible devient un adversaire à conquérir !');
         $ferraille4->setImage('defonceuse_jcvd.jpg');
         $manager->persist($ferraille4);
 
         // Ferraille 5
         $ferraille5 = new Ferraille();
-        $ferraille5->setNom('Epée de JJ');
+        $ferraille5->setNom('Epée de JC');
         $ferraille5->setPrix(200.00);
         $ferraille5->setType('Laiton');
         $ferraille5->setDescription('L\'épée en laiton de Jean-Claude est l\'outil de tranchage qui transforme chaque coupe en un coup de maître digne d\'un final spectaculaire où même les légumes applaudissent !');
