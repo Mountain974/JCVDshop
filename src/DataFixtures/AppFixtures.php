@@ -26,55 +26,55 @@ class AppFixtures extends Fixture
                 'nom' => 'Kickboxer : La chaussette anti-transpiration JCVD',
                 'prix' => 99,
                 'description' => 'Pour garder les pieds au sec pendant vos combats de rue',
-                'image' => ''
+                'image' => 'chaussettesJCVD.jpg'
             ],
             [
-                'nom' => 'Universal Soldier : Le camouflage urbain',
+                'nom' => "Déguisement 'Universal Soldier' : Le camouflage urbain",
                 'prix' => 330,
                 'description' => 'Pour passer inaperçu en pleine ville',
-                'image' => '...'
+                'image' => 'camouflage.jpg'
             ],
             [
-                'nom' => "Timecop : Le déodorant 'Retour vers le futur'",
+                'nom' => "Le sent bon JCVD",
                 'prix' => 45,
-                'description' => 'Pour sentir bon, même après avoir voyagé dans le temps',
-                'image' => ''
+                'description' => "Pour piloter avec l'odeur du Puissant",
+                'image' => 'sentBon.jpg'
             ],
             [
-                'nom' => 'Le split de JCVD : Le tapis de yoga pour débutant',
-                'prix' => 120,
-                'description' => 'Pour atteindre la flexibilité légendaire de JCVD',
-                'image' => ''
+                'nom' => 'Le tapis de souris JCVD',
+                'prix' => 28,
+                'description' => 'Pour éfleurer les tablettes légendaire de JCVD',
+                'image' => 'tapisSouris.jpg'
             ],
             [
-                'nom' => "La potion magique de JCVD : Le booster d'énergie",
-                'prix' => 19,
-                'description' => "Pour avoir la même énergie qu'un bourreau des cœurs",
-                'image' => ''
+                'nom' => "L'authentique assiette de JCVD",
+                'prix' => 850,
+                'description' => "Pour avoir la même régime alimentaire qu'un bourreau des cœurs",
+                'image' => 'assietteJCVD.png'
             ],
             [
                 'nom' => 'Les lunettes de soleil miroir de JCVD : Pour un regard de killer',
                 'prix' => 220,
                 'description' => 'Pour afficher un style inimitable',
-                'image' => ''
+                'image' => 'lunettesJCVD.jpg'
             ],
             [
                 'nom' => 'La perruque authentique de Jean Claude',
                 'prix' => 1500,
                 'description' => 'Pour devenir la star de votre soirée',
-                'image' => ''
+                'image' => 'perruqueJCVD.jpg'
             ],
             [
                 'nom' => 'Le sac de sport "Muscles en béton armé"',
                 'prix' => 100,
-                'description' => "Pour transporter votre matériel d'entraînement avec style",
-                'image' => ''
+                'description' => "JCVD ne s'est pas construit en un jour ...",
+                'image' => 'sacJCVD.jpg'
             ],
             [
-                'nom' => "Le livre de recettes 'Cuisine à la JCVD' : Des plats aussi musclés que lui",
+                'nom' => "Le livre des JC'",
                 'prix' => 60,
-                'description' => "Pour préparer des repas dignes d'un champion",
-                'image' => ''
+                'description' => "intègre la communauté JC si tu n'as pas peur de la perfection",
+                'image' => 'livreJCVD.jpg'
             ],
 
         ];
