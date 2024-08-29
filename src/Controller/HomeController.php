@@ -28,4 +28,30 @@ class HomeController extends AbstractController
             'produits' => $produitRep->findAll(),
         ]);
     }
+
+    #[Route('/citations', name: 'app_citations')]
+    public function citations(BouquetRepository $bouquetRepo): Response
+    {
+
+        $fakeReplicas = $bouquetRepo->findAll();
+        $randomfakeReplicas = $fakeReplicas[array_rand($fakeReplicas)]->getFakeReplica();
+
+        return $this->render('citations/citations.html.twig', [
+            'title' => 'Citations',
+            'fakeReplica' => $randomfakeReplicas,
+        ]);
+    }
+
+    #[Route('/promos', name: 'app_promo')]
+    public function promo(BouquetRepository $bouquetRepo): Response
+    {
+
+        $fakeReplicas = $bouquetRepo->findAll();
+        $randomfakeReplicas = $fakeReplicas[array_rand($fakeReplicas)]->getFakeReplica();
+
+        return $this->render('promo/promo.html.twig', [
+            'title' => 'Promo',
+            'fakeReplica' => $randomfakeReplicas,
+        ]);
+    }
 }
