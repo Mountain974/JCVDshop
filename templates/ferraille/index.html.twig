@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Joujoux de JCVD{% endblock %}
+
+{% block body %}
+    <h1>Joujoux de JCVD</h1>
+
+    <div class="row">
+        {% for ferraille in ferrailles %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                 <img src="{{ asset('images/' ~ ferraille.image) }}" class="card-img-top" alt="{{ ferraille.nom }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ ferraille.nom }}</h5>
+                        <p class="card-text">{{ ferraille.description }}</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Prix : {{ ferraille.prix }} €</li>
+                            <li class="list-group-item">Type : {{ ferraille.type }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

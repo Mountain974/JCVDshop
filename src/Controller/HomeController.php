@@ -16,6 +16,8 @@ class HomeController extends AbstractController
         $fakeReplicas = $bouquetRepo->findAll();
         $randomfakeReplicas = $fakeReplicas[array_rand($fakeReplicas)]->getFakeReplica();
 
+       
+
         return $this->render('home/index.html.twig', [
             'title' => 'Home',
             'fakeReplica' => $randomfakeReplicas,
