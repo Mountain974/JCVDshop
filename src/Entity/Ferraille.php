@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\FerrailleRepository;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: FerrailleRepository::class)]
@@ -26,8 +25,8 @@ class Ferraille
     #[ORM\Column(length: 50)]
     private ?string $image = null;
 
-    #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 0)]
-    private ?string $prix = null;
+    #[ORM\Column]
+    private ?float $prix = null;
 
     public function getId(): ?int
     {
@@ -82,12 +81,12 @@ class Ferraille
         return $this;
     }
 
-    public function getPrix(): ?string
+    public function getPrix(): ?float
     {
         return $this->prix;
     }
 
-    public function setPrix(string $prix): static
+    public function setPrix(float $prix): static
     {
         $this->prix = $prix;
 
