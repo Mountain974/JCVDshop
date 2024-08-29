@@ -51,10 +51,6 @@ class BouquetFixtures extends Fixture
                 'synonyme' => 'parfum',
                 'fakeReplica' => "Le parfum, c'est comme une mélodie invisible qui danse autour de toi. Chaque senteur est une note qui réveille des souvenirs et éveille des émotions, comme un symphonie subtile jouée par l'univers."
             ],
-            [
-                'synonyme' => 'crevette',
-                'fakeReplica' => "Une crevette, c'est comme un petit trésor de la mer, capable de te montrer que même les plus petites choses peuvent avoir un goût immense de profondeur et de complexité."
-            ],
         ];
 
         foreach ($replicas as $replicaData) {
