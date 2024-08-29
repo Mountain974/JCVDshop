@@ -9,6 +9,24 @@
 </style>
 
 <div class="example-wrapper">
+    <h1>✅ Bienvenue au JCVD Shop ✅</h1>
+
+    <ul>
+        {% for produit in produits %}
+            <li>
+                <div class="mx-auto m-5">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ asset('images/' ~ produit.image) }}" alt="illustration {{ produit.nom }}"/>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ produit.nom }}</h5>
+                            <p class="card-text">{{ produit.description }}</p>
+                            <p class="card-text">{{ produit.prix }}</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
 
 </div>
 {% endblock %}
