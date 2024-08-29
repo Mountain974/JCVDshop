@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+
+<h1 class="mt-5 mx-auto">The best goodies of the word</h1>
+
+<div class="row m-5">
+        {% for produit in produits %}
+                <div class="col-md-4">
+                    <div class="card mb-4" style="width: 25rem;">
+                        <img class="card-img-top" src="{{ asset('images/' ~ produit.image) }}" alt="illustration {{ produit.nom }}" style="object-fit: cover; width: 100%; height: 400px;"/>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ produit.nom }}</h5>
+                            <p class="card-text">{{ produit.description }}</p>
+                            <ul class="list-group list-group-flush">
+                             <li class="list-group-item"><p class="card-text">Prix : {{ produit.prix }} €</p></li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+        {% endfor %}
+</div>
+{% endblock %}
